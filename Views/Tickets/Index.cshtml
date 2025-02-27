@@ -1,0 +1,33 @@
+﻿@model IEnumerable<WebApplication1.Models.Entity.Ticket>
+
+@{
+    ViewBag.Title = "Ticket List";
+}
+
+<h2>Ticket List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Ticket ID</th>
+            <th>Purchase Date</th>
+            <th>Ticket Number</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ticket in Model)
+        {
+            <tr>
+                <td>@ticket.TicketId</td>
+                <td>@ticket.PurchaseDate.ToString("yyyy-MM-dd")</td>
+                <td>@ticket.TicketNumber</td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = ticket.TicketId }) |
+                    @Html.ActionLink("Details", "Details", new { id = ticket.TicketId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = ticket.TicketId })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

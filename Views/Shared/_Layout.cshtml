@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] -WebApplication1 </title>
+    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/templatemo_571_hexashop/assets/css/templatemo-hexashop.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebApplication1styles.css" asp-append-version="true" /> *@
+
+    <link href="~/templatemo_571_hexashop/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/templatemo_571_hexashop/assets/css/flex-slider.css" rel="stylesheet" />
+    <link href="~/templatemo_571_hexashop/assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="~/templatemo_571_hexashop/assets/css/lightbox.css" rel="stylesheet" />
+    <link href="~/templatemo_571_hexashop/assets/css/owl-carousel.css" rel="stylesheet" />
+    <link href="~/templatemo_571_hexashop/assets/css/templatemo-hexashop.css" rel="stylesheet" />
+</head>
+<body>
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <img src="~/templatemo_571_hexashop/assets/images/logo.png" />
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="#top" class="active">Anasayfa</a></li>
+                            <li class="scroll-to-section"><a href="#men">Konser</a></li>
+                            <li class="scroll-to-section"><a href="#women">Sinema</a></li>
+                            <li class="scroll-to-section"><a href="#kids">Festival</a></li>
+                            <li class="scroll-to-section"><a href="#kids">Müze</a></li>
+                            <li class="submenu">
+                                <a href="javascript:;">Sayfalar</a>
+                                <ul>
+                                    <li><a href="about.html">Hakkımızda</a></li>
+                                    <li><a href="products.html">Etkinliklerimiz</a></li>
+                                    <li><a href="contact.html">Bize Ulaş</a></li>
+                                </ul>
+                            </li>
+                            <li class="submenu">
+                                <a href="javascript:;">Sayfalar</a>
+                                <ul>
+                                    <li><a href="#">Sayfa 1</a></li>
+                                    <li><a href="#">Sayfa 2</a></li>
+                                    <li><a href="#">Sayfa 3</a></li>
+                                    <li><a rel="nofollow" href="https://templatemo.com/page/4" target="_blank">Sayfa 4</a></li>
+                                </ul>
+                            </li>
+                            <li class="scroll-to-section"><a href="#explore">Keşfet</a></li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menü</span>
+                        </a>
+
+
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+        @RenderBody()
+    </header>
+
+
+   @await RenderSectionAsync("Scripts", required: false) 
+</body>
+</html>
